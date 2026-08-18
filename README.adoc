@@ -1,0 +1,7 @@
+= electron-custom-dialog
+
+Custom dialog windows for Electron apps — HTML/CSS dialog surfaces instead of native OS prompts.
+
+This repository is a plan seed. See link:PLAN.adoc[PLAN.adoc].
+
+Owned by link:https://github.com/HCI-Nerdz[HCI-Nerdz] (interaction design). OS-level Explorer utilities live in link:https://github.com/Desktop-Tooling[Desktop-Tooling].

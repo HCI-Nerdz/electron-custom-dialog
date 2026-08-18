@@ -1,0 +1,23 @@
+= Electron Custom File Dialog Plan
+
+== Overview
+The native file dialogs provided by the OS via `Electron.dialog.showOpenDialog` lack critical flexibility. This project aims to build an embeddable, full-DOM file explorer component that interfaces beautifully with Electron applications like VS Code to replace the native dialog entirely.
+
+== Requirements
+*   **Dual-Selection Support**: Allow the selection of both files and folders without a modality switch.
+*   **Workspace Cognizance**: Add specialized hooks (e.g., latent buttons) when custom extensions like `.code-workspace` are selected.
+*   **Keyboard navigation**: Support standard `Up/Down` and type-to-search behaviors in the tree.
+*   **Aesthetics**: Rich modern glassmorphic interface that seamlessly overrides the window layer.
+*   **Performance**: Fast rendering of heavy directories (virtualized DOM/list rendering).
+
+== Architecture Plan
+1.  **Main Process Proxy Module**: Create an interceptor that overrides Electron's built-in `dialog.showOpenDialog` by hooking the original method.
+2.  **Renderer Window**: Inject a frameless `BrowserWindow` overlaid on the parent application window. 
+3.  **File System Bridge**: Use `contextBridge` to expose Node `fs`/`path` module APIs safely to the UI renderer.
+4.  **UI Component**: A custom React/Vue-like tree hierarchy rendering the system file structure.
+
+== Implementation Steps
+1.  [ ] Setup webpack/vite boilerplate for the interceptor library and the UI rendering app.
+2.  [ ] Write the local system file tree node iterator.
+3.  [ ] Design and implement the virtualized tree view for rendering.
+4.  [ ] Overlay IPC message routing for file selection event return.

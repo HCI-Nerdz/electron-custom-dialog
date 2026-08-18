@@ -1,0 +1,25 @@
+{
+  "exec": {
+    "commands": [
+      {
+        "command": "node",
+        "args": [
+          "-e",
+          "console.log(process.argv[1]);"
+        ],
+        "exts": [
+          "js",
+          "ts"
+        ]
+      }
+    ]
+  },
+  "json": {},
+  "plugins": [
+    "https://plugins.dprint.dev/json-0.19.2.wasm",
+    "https://plugins.dprint.dev/typescript-0.91.1.wasm"
+  ],
+  "includes": [
+    "**/*.{json,jsonc,js,jsx,ts,tsx}"
+  ]
+}

@@ -1,0 +1,7 @@
+*
+!.gitignore
+!PLAN.adoc
+!dprint.jsonc
+!README.adoc
+MEMORIES.md
+**/MEMORIES.md
