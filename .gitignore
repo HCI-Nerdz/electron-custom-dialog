@@ -3,3 +3,8 @@
 !PLAN.adoc
 !dprint.jsonc
 !README.adoc
+!/.github/
+!/.github/workflows/
+!/.github/workflows/encoding-guard.yml
+!/.editorconfig
+!/.gitattributes
